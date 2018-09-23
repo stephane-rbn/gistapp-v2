@@ -3,13 +3,16 @@
     <div class="gist-heading">
       <%= image_tag 'https://via.placeholder.com/30x30', alt: 'user avatar', class: 'gist-avatar' %>
       <a href="#"><p class="gist-username">stephanyan</p></a> /
-      <a href="#"><p class="gist-filename"><%= gist.filename %></p></a>
+      <%= link_to gist.filename, gist, class: 'gist-filename' %>
     </div>
-    <p class="gist-time-ago font-weight-light">Created 42 minutes ago</p>
+    <% if gist.created_at == gist.updated_at %>
+      <p class="gist-time-ago font-weight-light">Created <%= time_ago_in_words(gist.created_at) %> ago</p>
+    <% else %>
+      <p class="gist-time-ago font-weight-light">Updated <%= time_ago_in_words(gist.updated_at) %> ago</p>
+    <% end %>
     <p class="gist-description font-weight-light"><%= gist.description %></p>
     <div class="gist-content">
       <p><%= gist.content %></p>
     </div>
   </section>
 <% end %>
-

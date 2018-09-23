@@ -1,0 +1,19 @@
+<h2>Edit gist</h2>
+
+<%= form_for @gist, url: { action: 'update' }, html: { class: 'gist-form' } do |f| %>
+  <fieldset>
+    <div class="form-group">
+      <%= f.label :description %>
+      <%= f.text_field :description, class: 'form-control', placeholder: 'Gist description...' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :filename %>
+      <%= f.text_field :filename, class: 'form-control', placeholder: 'Filename including extension...' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :content %>
+      <%= f.text_area :content, class: 'form-control gist-content', rows: 3 %>
+    </div>
+    <%= f.submit 'Create gist', class: 'btn btn-secondary float-right gist-submit' %>
+  </fieldset>
+<% end %>

@@ -28,7 +28,7 @@ body a:hover {
 
 .navbar {
   height: 54px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 
   .nav-item {
     font-size: 14px;
@@ -52,4 +52,8 @@ body a:hover {
     width: 20px;
     border-radius: 2px;
   }
+}
+
+footer {
+  margin-top: 200px;
 }
