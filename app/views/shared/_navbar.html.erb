@@ -2,7 +2,7 @@
 
   <div class="container">
 
-    <a class="navbar-brand" href="#"><strong>GitHub</strong>Gist</a>
+    <a class="navbar-brand" href="#"><strong>GitHub</strong><span class="navbar-brand-gist">Gist</span></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -10,7 +10,7 @@
     <div class="collapse navbar-collapse" id="navbarColor01">
 
       <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search...">
+        <input class="form-control mr-sm-2 search-gist" type="text" placeholder="Search...">
       </form>
 
       <ul class="navbar-nav mr-auto">
@@ -28,7 +28,7 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <%= image_tag 'https://via.placeholder.com/30x30', alt: 'user avatar' %>
+            <%= image_tag 'https://via.placeholder.com/20x20', alt: 'user avatar', class: 'navbar-avatar' %>
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item" href="#">Signed in as <br><strong>stephanyan</strong></a>

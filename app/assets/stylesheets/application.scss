@@ -15,6 +15,25 @@
  */
 
 .navbar {
-  height: 60px;
+  height: 54px;
   margin-bottom: 20px;
+
+  .navbar-brand {
+    font-size: 25px;
+  }
+
+  .navbar-brand-gist {
+    font-weight: 300;
+  }
+
+  form .search-gist {
+    height: 30px;
+    width: 170px;
+  }
+
+  .navbar-avatar {
+    height: 20px;
+    width: 20px;
+    border-radius: 2px;
+  }
 }
