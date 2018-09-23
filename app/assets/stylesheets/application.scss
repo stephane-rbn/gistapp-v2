@@ -18,13 +18,17 @@ body {
   font-family: sans-serif;
 }
 
+body a:hover {
+  text-decoration: none;
+}
+
 .container {
   max-width: 1000px;
 }
 
 .navbar {
   height: 54px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 
   .nav-item {
     font-size: 14px;
@@ -48,4 +52,8 @@ body {
     width: 20px;
     border-radius: 2px;
   }
+}
+
+footer {
+  margin-top: 200px;
 }

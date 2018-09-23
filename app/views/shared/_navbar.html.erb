@@ -15,16 +15,16 @@
 
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" href="#">All gists<span class="sr-only">(current)</span></a>
+          <%= link_to 'All gists', gists_path, class: 'nav-link' %>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com">GitHub</a>
+          <a class="nav-link" href="#">GitHub</a>
         </li>
       </ul>
 
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="#">New gist</a>
+          <%= link_to 'New gist', new_gist_path, class: 'nav-link' %>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -33,7 +33,7 @@
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item" href="#">Signed in as <br><strong>stephanyan</strong></a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Your gists</a>
+            <%= link_to 'Your gists', gists_path, class: 'dropdown-item' %>
             <a class="dropdown-item" href="#">Sign out</a>
           </div>
         </li>
