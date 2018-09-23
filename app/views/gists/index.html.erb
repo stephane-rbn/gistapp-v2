@@ -1,0 +1,15 @@
+<% @gists.each do |gist| %>
+  <section class="gist-home">
+    <div class="gist-heading">
+      <%= image_tag 'https://via.placeholder.com/30x30', alt: 'user avatar', class: 'gist-avatar' %>
+      <a href="#"><p class="gist-username">stephanyan</p></a> /
+      <a href="#"><p class="gist-filename"><%= gist.filename %></p></a>
+    </div>
+    <p class="gist-time-ago font-weight-light">Created 42 minutes ago</p>
+    <p class="gist-description font-weight-light"><%= gist.description %></p>
+    <div class="gist-content">
+      <p><%= gist.content %></p>
+    </div>
+  </section>
+<% end %>
+

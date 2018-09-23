@@ -18,6 +18,10 @@ body {
   font-family: sans-serif;
 }
 
+body a:hover {
+  text-decoration: none;
+}
+
 .container {
   max-width: 1000px;
 }
