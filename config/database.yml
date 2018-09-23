@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: gistapp-v2_production
+  database: gistapp-v2_development
   username: gistapp-v2
   password: <%= ENV['GISTAPP-V2_DATABASE_PASSWORD'] %>
