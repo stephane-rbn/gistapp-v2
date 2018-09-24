@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: gistapp-v2_development
-  username: gistapp-v2
+  username: stephanyan
   password: <%= ENV['GISTAPP-V2_DATABASE_PASSWORD'] %>
