@@ -8,6 +8,7 @@
 #  content     :text
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  category_id :bigint(8)
 #
 
 require 'test_helper'
