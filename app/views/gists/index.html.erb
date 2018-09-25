@@ -1,5 +1,11 @@
 <%= render 'shared/categories' %>
 
+<% if params[:search] %>
+  <h4 class="result-title font-weight-light">
+    <%= @gists.length %> result<%= 's' if @gists.length > 1 %>
+  </h4>
+<% end %>
+
 <% @gists.each do |gist| %>
   <section class="gist-home">
     <div class="gist-heading">

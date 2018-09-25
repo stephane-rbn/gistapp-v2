@@ -4,7 +4,9 @@ class GistsController < ApplicationController
   def index
     @categories = Category.all
 
-    if params[:category]
+    if params[:search]
+      @gists = Gist.search(params[:search]).order('created_at DESC')
+    elsif params[:category]
       @category = Category.find_by(name: params[:category])
       @gists = Gist.where(category_id: @category.id).order('created_at DESC')
     else
