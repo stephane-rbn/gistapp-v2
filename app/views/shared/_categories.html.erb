@@ -1,0 +1,22 @@
+<ul class="nav nav-pills">
+  <% if !params[:category] || params[:category] == 'all' %>
+    <li class="nav-item">
+      <%= link_to 'All', gists_path, class: 'nav-link active' %>
+    </li>
+  <% else %>
+    <li class="nav-item">
+      <%= link_to 'All', gists_path, class: 'nav-link' %>
+    </li>
+  <% end %>
+  <% @categories.each do |category| %>
+    <% if params[:category] == category.name %>
+      <li class="nav-item">
+        <%= link_to category.name, gists_path(category: category.name), class: 'nav-link active' %>
+      </li>
+    <% else %>
+      <li class="nav-item">
+        <%= link_to category.name, gists_path(category: category.name), class: 'nav-link' %>
+      </li>
+    <% end %>
+  <% end %>
+</ul>

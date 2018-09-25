@@ -2,7 +2,14 @@ class GistsController < ApplicationController
   before_action :find_gist, only: %i(show edit update destroy)
 
   def index
-    @gists = Gist.all.order('created_at DESC')
+    @categories = Category.all
+
+    if params[:category]
+      @category = Category.find_by(name: params[:category])
+      @gists = Gist.where(category_id: @category.id).order('created_at DESC')
+    else
+      @gists = Gist.all.order('created_at DESC')
+    end
   end
 
   def new
