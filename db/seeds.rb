@@ -12,7 +12,7 @@ Category.destroy_all
 
 Gist.create(
   filename: 'hello_world.rb',
-  description: "puts ",
+  description: 'Back to basics',
   content: "puts 'hello!'",
   category_id: @ruby.id
 )

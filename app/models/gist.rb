@@ -17,4 +17,13 @@ class Gist < ApplicationRecord
   validates :filename, presence: true, length: { minimum: 3, maximum: 55 }
   validates :content, presence: true
   validates :description, presence: true
+
+  def self.search(search)
+    where(
+      'filename ILIKE ? OR description ILIKE ? OR content ILIKE ?',
+      "%#{search}%",
+      "%#{search}%",
+      "%#{search}%"
+    )
+  end
 end

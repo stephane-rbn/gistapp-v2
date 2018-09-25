@@ -9,9 +9,10 @@
 
     <div class="collapse navbar-collapse" id="navbarColor01">
 
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2 search-gist" type="text" placeholder="Search...">
-      </form>
+      <%= form_tag(gists_path, method: :get, class: 'form-inline my-2 my-lg-0') do %>
+        <%= text_field_tag(:search, params[:search], placeholder: 'Search...',
+        class: 'form-control mr-sm-2 search-gist') %>
+      <% end %>
 
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
