@@ -12,6 +12,8 @@
 #
 
 class Gist < ApplicationRecord
+  belongs_to :category
+
   validates :filename, presence: true, length: { minimum: 3, maximum: 55 }
   validates :content, presence: true
   validates :description, presence: true
