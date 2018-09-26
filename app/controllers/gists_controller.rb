@@ -15,6 +15,7 @@ class GistsController < ApplicationController
   end
 
   def new
+    @categories = Category.all
     @gist = Gist.new
   end
 
@@ -23,7 +24,7 @@ class GistsController < ApplicationController
 
     if @gist.save
       flash[:notice] = 'New gist successfully added!'
-      redirect_to @gist
+      redirect_to gists_path
     else
       render :new
     end
@@ -44,7 +45,7 @@ class GistsController < ApplicationController
   end
 
   def destroy
-    @gist.detroy
+    @gist.destroy
     redirect_to gists_path
   end
 
@@ -55,6 +56,6 @@ class GistsController < ApplicationController
   end
 
   def gist_params
-    params.require(:gist).permit(:filename, :description, :content)
+    params.require(:gist).permit(:filename, :description, :content, :category_id)
   end
 end
