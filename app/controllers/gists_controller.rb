@@ -26,6 +26,7 @@ class GistsController < ApplicationController
       flash[:notice] = 'New gist successfully added!'
       redirect_to gists_path
     else
+      flash[:error] = 'Something wrong happened. Please try again!'
       render :new
     end
   end
@@ -38,8 +39,10 @@ class GistsController < ApplicationController
 
   def update
     if @gist.update(gist_params)
+      flash[:notice] = 'New gist successfully added!'
       redirect_to @gist
     else
+      flash[:error] = 'Something wrong happened. Please try again!'
       render :edit
     end
   end
